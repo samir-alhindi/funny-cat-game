@@ -1,6 +1,8 @@
-res://main/main.tscn
-res://main/main.gd
 res://cats/cat.tscn
 res://cats/cat.gd
-res://cats/cat_data.gd
-res://cats/normal_cat.tres
+res://cats/score.tscn
+res://main/main.tscn
+res://cats/normal_cat.tscn
+res://globals/global.tscn
+res://globals/global.gd
+res://main/main.gd

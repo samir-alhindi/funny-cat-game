@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://buph56fg5yrwx"]
+
+[node name="Score" type="RichTextLabel"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+text = "+100"

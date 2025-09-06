@@ -1,4 +1,9 @@
-Timer
+RichTextLabel
+AudioStreamPlayer
+Node
 CollisionShape2D
-AnimatedSprite2D
 Area2D
+Control
+Cat
+Timer
+AnimatedSprite2D
