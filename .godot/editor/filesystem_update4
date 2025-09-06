@@ -1,0 +1,6 @@
+res://main/main.tscn
+res://main/main.gd
+res://cats/cat.tscn
+res://cats/cat.gd
+res://cats/cat_data.gd
+res://cats/normal_cat.tres

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqvvdn25jdm0u"]
+
+[ext_resource type="Script" uid="uid://d0g61qsfxgyhm" path="res://cats/cat.gd" id="1_sty0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sty0i"]
+size = Vector2(50, 50)
+
+[node name="Cat" type="Area2D"]
+script = ExtResource("1_sty0i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+speed_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_sty0i")
