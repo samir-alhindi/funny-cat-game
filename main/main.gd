@@ -9,7 +9,7 @@ func _ready() -> void:
 	spawn_cat()
 
 func spawn_cat() -> void:
-	var cat := Cat.new_cat(get_viewport_rect().size)
+	var cat := Cat.new_cat(get_viewport_rect().size, score)
 	add_child(cat)
 
 func change_score(amount: int) -> void:

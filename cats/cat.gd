@@ -7,9 +7,9 @@ class_name Cat extends Area2D
 
 var dir: Vector2
 
-static func new_cat(screen_size: Vector2) -> Cat:
-	#var cat: Cat = preload("uid://cd8n8jsf0ilfd").instantiate()
-	var cat: Cat = preload("uid://c7l4n5dhla5hh").instantiate()
+static func new_cat(screen_size: Vector2, score: int) -> Cat:
+	var cat_scene: PackedScene = get_cat_scene(score)
+	var cat: Cat = cat_scene.instantiate()
 	var offset := cat.offset
 	cat.global_position = Vector2(
 		randi_range(offset.x, screen_size.x-offset.x),
@@ -19,6 +19,13 @@ static func new_cat(screen_size: Vector2) -> Cat:
 		randf_range(-1,1),
 		randf_range(-1,1)).normalized()
 	return cat
+
+static func get_cat_scene(score: int) -> PackedScene:
+	var num := randf()
+	if num <= .15:
+		return preload("uid://c7l4n5dhla5hh") # Blue Aura cat
+	else:
+		return preload("uid://cd8n8jsf0ilfd") # Normal cat
 
 func _ready() -> void:
 	%AnimatedSprite2D.sprite_frames = sprites
@@ -43,11 +50,16 @@ func on_click(event: InputEventMouseButton) -> void:
 	%ClickSound.play()
 	dir = Vector2.ZERO
 	%CollisionShape2D.set_deferred("disabled", true)
-	var score: RichTextLabel = preload("uid://buph56fg5yrwx").instantiate()
-	add_child(score)
-	score.global_position = Vector2(
-		global_position.x - offset.x * 1.5,
-		global_position.y - offset.y * 2 )
+	
+	var score_label: RichTextLabel = preload("uid://buph56fg5yrwx").instantiate()
+	score_label.text = "+%d" % points
+	add_child(score_label)
+	var label_x_pos := global_position.x - offset.x
+	var label_y_pos := global_position.y + ( - offset.y * 2.5 # Spawn above cat
+		if global_position.y > get_viewport_rect().size.y / 2 # Is cat in the upper half of screen or lower ?
+		else offset.y * 2) # Spawn label below cat
+	score_label.global_position = Vector2(label_x_pos, label_y_pos)
+	
 	var og_scale = %AnimatedSprite2D.scale
 	var tween := create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_BOUNCE)
@@ -55,8 +67,8 @@ func on_click(event: InputEventMouseButton) -> void:
 	tween.tween_property(%AnimatedSprite2D, "scale", og_scale, 0.2)
 	tween.set_parallel()
 	tween.tween_property(%AnimatedSprite2D, "modulate:a", 0.0, 0.2)
-	tween.tween_property(score, "modulate:a", 0.0, 0.2)
-	tween.tween_property(score, "global_position", score.global_position - Vector2(0, 20), 0.2)
+	tween.tween_property(score_label, "modulate:a", 0.0, 0.2)
+	tween.tween_property(score_label, "global_position", score_label.global_position - Vector2(0, 20), 0.2)
 	await %ClickSound.finished
 	Global.cat_clicked.emit(points)
 	queue_free()

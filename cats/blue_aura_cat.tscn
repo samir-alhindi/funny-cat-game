@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dew50dnu801x3" path="res://sprites/Dance/spr_mike_cat_dance_13.png" id="15_3537l"]
 [ext_resource type="Texture2D" uid="uid://fdfmg3b7do8n" path="res://sprites/Dance/spr_mike_cat_dance_14.png" id="16_gssyi"]
 [ext_resource type="Texture2D" uid="uid://duk1jfvbwacww" path="res://sprites/Dance/spr_mike_cat_dance_15.png" id="17_5j4e8"]
-[ext_resource type="Shader" uid="uid://cne462jcnx8r" path="res://outline.gdshader" id="35_iijpg"]
+[ext_resource type="Shader" uid="uid://cne462jcnx8r" path="res://cats/outline.gdshader" id="35_iijpg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d80ql"]
 animations = [{
@@ -85,6 +85,21 @@ shader_parameter/inside = false
 shader_parameter/add_margins = false
 shader_parameter/number_of_images = Vector2(1, 1)
 
+[sub_resource type="Animation" id="Animation_nmk0x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_aafo0"]
 resource_name = "glow"
 loop_mode = 1
@@ -99,21 +114,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 1, 1), Color(0, 0, 1, 0), Color(0, 0, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_nmk0x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a6b6t"]

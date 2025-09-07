@@ -7,3 +7,6 @@ res://cats/normal_cat.tscn
 res://globals/global.tscn
 res://cats/score.tscn
 res://cats/blue_aura_cat.gd
+res://cats/cat.gd
+res://main/main.gd
+res://cats/outline.gdshader
