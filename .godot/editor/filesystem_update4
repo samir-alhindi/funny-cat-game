@@ -1,8 +1,9 @@
-res://cats/cat.tscn
-res://cats/cat.gd
-res://cats/score.tscn
+res://cats/blue_aura_cat.tscn
+res://cats/blue_aura_cat.gdshader
+res://outline.gdshader
 res://main/main.tscn
+res://cats/cat.tscn
 res://cats/normal_cat.tscn
 res://globals/global.tscn
-res://globals/global.gd
-res://main/main.gd
+res://cats/score.tscn
+res://cats/blue_aura_cat.gd

@@ -8,7 +8,8 @@ class_name Cat extends Area2D
 var dir: Vector2
 
 static func new_cat(screen_size: Vector2) -> Cat:
-	var cat: Cat = preload("uid://cd8n8jsf0ilfd").instantiate()
+	#var cat: Cat = preload("uid://cd8n8jsf0ilfd").instantiate()
+	var cat: Cat = preload("uid://c7l4n5dhla5hh").instantiate()
 	var offset := cat.offset
 	cat.global_position = Vector2(
 		randi_range(offset.x, screen_size.x-offset.x),
