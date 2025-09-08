@@ -3,5 +3,7 @@
 [node name="Score" type="RichTextLabel"]
 offset_left = -20.0
 offset_top = -20.0
-offset_right = 20.0
-text = "+100"
+offset_right = 30.0
+text = "+1000"
+fit_content = true
+scroll_active = false

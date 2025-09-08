@@ -1,14 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqvvdn25jdm0u"]
 
 [ext_resource type="Script" uid="uid://d0g61qsfxgyhm" path="res://cats/cat.gd" id="1_sty0i"]
-[ext_resource type="AudioStream" uid="uid://djlmx0wsdhvbx" path="res://sounds/snd_magicsprinkle.wav" id="2_5ic4v"]
+[ext_resource type="AudioStream" uid="uid://ct1sh1qov71e2" path="res://sounds/snd_magicsprinkle.ogg" id="2_5ic4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sty0i"]
 size = Vector2(30, 40)
 
 [node name="Cat" type="Area2D"]
 script = ExtResource("1_sty0i")
-speed = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

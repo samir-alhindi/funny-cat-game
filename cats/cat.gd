@@ -3,7 +3,7 @@ class_name Cat extends Area2D
 @export var points: int = 50
 @export var sprites: SpriteFrames
 @export var offset: Vector2 = Vector2(15, 20)
-@export var speed: int
+@export var speed: int = 100
 
 var dir: Vector2
 
@@ -22,9 +22,11 @@ static func new_cat(screen_size: Vector2, score: int) -> Cat:
 
 static func get_cat_scene(score: int) -> PackedScene:
 	var num := randf()
-	if num <= .04:
+	if num <= .25:
+		return preload("uid://bh4760nkbyug6") # Angel cat
+	elif num <= .50:
 		return preload("uid://p2eg64ri5mi1") # Rainbow cat
-	elif num <= .15:
+	elif num <= .75:
 		return preload("uid://c7l4n5dhla5hh") # Blue Aura cat
 	else:
 		return preload("uid://cd8n8jsf0ilfd") # Normal cat
@@ -40,9 +42,9 @@ func _physics_process(delta: float) -> void:
 	
 	var pos: Vector2 = global_position
 	
-	if pos.x + offset.x >= get_viewport_rect().size.x or pos.x - offset.x <= 0:
+	if pos.x + offset.x > get_viewport_rect().size.x or pos.x - offset.x < 0:
 		dir.x *= -1
-	if pos.y + offset.y >= get_viewport_rect().size.y or pos.y - offset.y <= 0:
+	if pos.y + offset.y > get_viewport_rect().size.y or pos.y - offset.y < 0:
 		dir.y *= -1
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -75,3 +77,7 @@ func on_click(event: InputEventMouseButton) -> void:
 	await %ClickSound.finished
 	Global.cat_clicked.emit(points)
 	queue_free()
+
+func spawn_window() -> void:
+	var window: Sprite2D = preload("uid://c16bg7bkunapy").instantiate()
+	Global.add_window.emit(window, self.global_position)

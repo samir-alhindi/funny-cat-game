@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://p2eg64ri5mi1"]
+[gd_scene load_steps=26 format=3 uid="uid://p2eg64ri5mi1"]
 
 [ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_kh6eb"]
 [ext_resource type="Script" uid="uid://bwbrhnko3e6p2" path="res://cats/rainbow_cat.gd" id="2_eirod"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dew50dnu801x3" path="res://sprites/Dance/spr_mike_cat_dance_13.png" id="15_84pnu"]
 [ext_resource type="Texture2D" uid="uid://fdfmg3b7do8n" path="res://sprites/Dance/spr_mike_cat_dance_14.png" id="16_6nocg"]
 [ext_resource type="Texture2D" uid="uid://duk1jfvbwacww" path="res://sprites/Dance/spr_mike_cat_dance_15.png" id="17_l56cd"]
-[ext_resource type="AudioStream" uid="uid://cvqbgxew2l5qd" path="res://sounds/bagel_susie.ogg" id="18_yvecl"]
+[ext_resource type="AudioStream" uid="uid://c3pd2gdciu25h" path="res://sounds/bagel_susie.wav" id="20_1qmc5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qmc5"]
 animations = [{
@@ -77,6 +77,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_1qmc5"]
+resource_local_to_scene = true
+offsets = PackedFloat32Array(0, 0.518272, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1)
+
 [sub_resource type="Animation" id="Animation_kh6eb"]
 resource_name = "glow"
 loop_mode = 2
@@ -121,9 +126,10 @@ sprites = SubResource("SpriteFrames_1qmc5")
 
 [node name="RainbowCatEffect" parent="." index="0" instance=ExtResource("3_x32nw")]
 unique_name_in_owner = true
+color_initial_ramp = SubResource("Gradient_1qmc5")
 
 [node name="ClickSound" parent="." index="3"]
-stream = ExtResource("18_yvecl")
+stream = ExtResource("20_1qmc5")
 
 [node name="Anim" type="AnimationPlayer" parent="." index="4"]
 unique_name_in_owner = true

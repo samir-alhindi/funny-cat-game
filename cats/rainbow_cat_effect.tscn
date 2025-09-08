@@ -7,8 +7,9 @@ offsets = PackedFloat32Array(0, 0.996678)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="Gradient" id="Gradient_tw3vk"]
-offsets = PackedFloat32Array(0, 0.524917, 1)
-colors = PackedColorArray(0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1)
+resource_local_to_scene = true
+offsets = PackedFloat32Array(0, 0.518272, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1)
 
 [node name="RainbowCatEffect" type="CPUParticles2D"]
 amount = 4

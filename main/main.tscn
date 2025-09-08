@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsik20vfufcx7"]
+[gd_scene load_steps=3 format=3 uid="uid://dsik20vfufcx7"]
 
 [ext_resource type="Script" uid="uid://bymq0erjmeyxd" path="res://main/main.gd" id="1_53q0u"]
+[ext_resource type="AudioStream" uid="uid://fqxqf454ifst" path="res://sounds/snd_pianonoise.wav" id="2_pjrb6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_53q0u")
@@ -17,3 +18,7 @@ bbcode_enabled = true
 text = "[shake]score: 0"
 fit_content = true
 scroll_active = false
+
+[node name="WindowSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_pjrb6")

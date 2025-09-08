@@ -1,0 +1,162 @@
+[gd_scene load_steps=28 format=3 uid="uid://bh4760nkbyug6"]
+
+[ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_2ovp6"]
+[ext_resource type="Script" uid="uid://dwfxtail60o6h" path="res://cats/angel_cat.gd" id="2_qg3ov"]
+[ext_resource type="Texture2D" uid="uid://dcd0jg7c500ax" path="res://sprites/Dance/spr_mike_cat_dance_0.png" id="3_xd0t1"]
+[ext_resource type="Texture2D" uid="uid://dyxstuf2syhgg" path="res://sprites/Dance/spr_mike_cat_dance_1.png" id="4_7k3ts"]
+[ext_resource type="Texture2D" uid="uid://28cirvl2qmiv" path="res://sprites/Dance/spr_mike_cat_dance_2.png" id="5_8i3c8"]
+[ext_resource type="Texture2D" uid="uid://brhm3x6kac2bb" path="res://sprites/Dance/spr_mike_cat_dance_3.png" id="6_2xmkr"]
+[ext_resource type="Texture2D" uid="uid://beryomlrvmwde" path="res://sprites/Dance/spr_mike_cat_dance_4.png" id="7_aciis"]
+[ext_resource type="Texture2D" uid="uid://ci763knsqprgl" path="res://sprites/Dance/spr_mike_cat_dance_5.png" id="8_adtof"]
+[ext_resource type="Texture2D" uid="uid://bxetjvukmen1m" path="res://sprites/Dance/spr_mike_cat_dance_6.png" id="9_r44oi"]
+[ext_resource type="Texture2D" uid="uid://b562404di2iqp" path="res://sprites/Dance/spr_mike_cat_dance_7.png" id="10_x0ara"]
+[ext_resource type="Texture2D" uid="uid://dr0tx35r50uwh" path="res://sprites/Dance/spr_mike_cat_dance_8.png" id="11_41hit"]
+[ext_resource type="Texture2D" uid="uid://doidhtgns38wi" path="res://sprites/Dance/spr_mike_cat_dance_9.png" id="12_rief7"]
+[ext_resource type="Texture2D" uid="uid://euvn0hq85f2f" path="res://sprites/Dance/spr_mike_cat_dance_10.png" id="13_r8qtg"]
+[ext_resource type="Texture2D" uid="uid://dng0robq0tb6e" path="res://sprites/Dance/spr_mike_cat_dance_11.png" id="14_iclug"]
+[ext_resource type="Texture2D" uid="uid://ctsl545fefhsn" path="res://sprites/Dance/spr_mike_cat_dance_12.png" id="15_47y70"]
+[ext_resource type="Texture2D" uid="uid://dew50dnu801x3" path="res://sprites/Dance/spr_mike_cat_dance_13.png" id="16_q45of"]
+[ext_resource type="Texture2D" uid="uid://fdfmg3b7do8n" path="res://sprites/Dance/spr_mike_cat_dance_14.png" id="17_ryr0g"]
+[ext_resource type="Texture2D" uid="uid://duk1jfvbwacww" path="res://sprites/Dance/spr_mike_cat_dance_15.png" id="18_vvbud"]
+[ext_resource type="Texture2D" uid="uid://d0unw2sgey5pt" path="res://sprites/halo.png" id="20_2xmkr"]
+[ext_resource type="Texture2D" uid="uid://cxd4p4liql5m7" path="res://sprites/wing.png" id="20_8i3c8"]
+[ext_resource type="AudioStream" uid="uid://dyfv2p2ibhvpt" path="res://sounds/bagel_ralsei.wav" id="21_2xmkr"]
+[ext_resource type="PackedScene" uid="uid://bu0wqgih73xol" path="res://cats/angel_cat_effect.tscn" id="22_aciis"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_312bi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xd0t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7k3ts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8i3c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2xmkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aciis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_adtof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r44oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x0ara")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_41hit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rief7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r8qtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_iclug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_47y70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q45of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ryr0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vvbud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_adtof"]
+resource_local_to_scene = true
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_xd0t1"]
+resource_name = "glow"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7k3ts"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7k3ts"]
+_data = {
+&"RESET": SubResource("Animation_7k3ts"),
+&"glow": SubResource("Animation_xd0t1")
+}
+
+[node name="AngelCat" instance=ExtResource("1_2ovp6")]
+script = ExtResource("2_qg3ov")
+points = 1000
+sprites = SubResource("SpriteFrames_312bi")
+
+[node name="AngelCatEffect" parent="." index="0" instance=ExtResource("22_aciis")]
+unique_name_in_owner = true
+scale_amount_min = 0.1
+color_initial_ramp = SubResource("Gradient_adtof")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+self_modulate = Color(1, 1, 0.527797, 1)
+
+[node name="LeftWing" type="Sprite2D" parent="AnimatedSprite2D" index="0"]
+visible = false
+position = Vector2(-15, -10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_8i3c8")
+
+[node name="RightWing" type="Sprite2D" parent="AnimatedSprite2D" index="1"]
+visible = false
+position = Vector2(15, -10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_8i3c8")
+flip_h = true
+
+[node name="Halo" type="Sprite2D" parent="AnimatedSprite2D" index="2"]
+visible = false
+position = Vector2(0, -25)
+texture = ExtResource("20_2xmkr")
+
+[node name="ClickSound" parent="." index="3"]
+stream = ExtResource("21_2xmkr")
+
+[node name="Anim" type="AnimationPlayer" parent="." index="4"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_7k3ts")
+}
+autoplay = "glow"

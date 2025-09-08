@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu0wqgih73xol"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oliie"]
+load_path = "res://.godot/imported/circle.png-44b524053929f94dd1566f087585a590.ctex"
+
+[sub_resource type="Gradient" id="Gradient_408d1"]
+offsets = PackedFloat32Array(0, 0.996678)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_17rv7"]
+resource_local_to_scene = true
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 1)
+
+[node name="AngelCatEffect" type="CPUParticles2D"]
+amount = 4
+texture = SubResource("CompressedTexture2D_oliie")
+lifetime = 0.5
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 250.0
+angle_max = 360.0
+scale_amount_min = 0.25
+scale_amount_max = 0.25
+color_ramp = SubResource("Gradient_408d1")
+color_initial_ramp = SubResource("Gradient_17rv7")
+hue_variation_max = 1.0
