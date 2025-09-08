@@ -22,10 +22,13 @@ static func new_cat(screen_size: Vector2, score: int) -> Cat:
 
 static func get_cat_scene(score: int) -> PackedScene:
 	var num := randf()
-	if num <= .15:
+	if num <= .04:
+		return preload("uid://p2eg64ri5mi1") # Rainbow cat
+	elif num <= .15:
 		return preload("uid://c7l4n5dhla5hh") # Blue Aura cat
 	else:
 		return preload("uid://cd8n8jsf0ilfd") # Normal cat
+	
 
 func _ready() -> void:
 	%AnimatedSprite2D.sprite_frames = sprites

@@ -1,4 +1,6 @@
+CPUParticles2D
 AnimationPlayer
+AnimationTree
 RichTextLabel
 AudioStreamPlayer
 Node

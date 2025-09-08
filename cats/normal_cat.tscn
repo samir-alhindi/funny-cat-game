@@ -143,7 +143,6 @@ animations = [{
 script = ExtResource("2_m3opd")
 points = 10
 sprites = SubResource("SpriteFrames_f34ii")
-speed = 100
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 modulate = Color(0, 1, 0, 1)

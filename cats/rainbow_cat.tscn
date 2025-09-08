@@ -1,0 +1,133 @@
+[gd_scene load_steps=25 format=3 uid="uid://p2eg64ri5mi1"]
+
+[ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_kh6eb"]
+[ext_resource type="Script" uid="uid://bwbrhnko3e6p2" path="res://cats/rainbow_cat.gd" id="2_eirod"]
+[ext_resource type="Texture2D" uid="uid://dcd0jg7c500ax" path="res://sprites/Dance/spr_mike_cat_dance_0.png" id="2_yvecl"]
+[ext_resource type="Texture2D" uid="uid://dyxstuf2syhgg" path="res://sprites/Dance/spr_mike_cat_dance_1.png" id="3_gtjll"]
+[ext_resource type="PackedScene" uid="uid://c3ntbxuyqkusb" path="res://cats/rainbow_cat_effect.tscn" id="3_x32nw"]
+[ext_resource type="Texture2D" uid="uid://28cirvl2qmiv" path="res://sprites/Dance/spr_mike_cat_dance_2.png" id="4_1qmc5"]
+[ext_resource type="Texture2D" uid="uid://brhm3x6kac2bb" path="res://sprites/Dance/spr_mike_cat_dance_3.png" id="5_7i4pd"]
+[ext_resource type="Texture2D" uid="uid://beryomlrvmwde" path="res://sprites/Dance/spr_mike_cat_dance_4.png" id="6_06bct"]
+[ext_resource type="Texture2D" uid="uid://ci763knsqprgl" path="res://sprites/Dance/spr_mike_cat_dance_5.png" id="7_l5k2o"]
+[ext_resource type="Texture2D" uid="uid://bxetjvukmen1m" path="res://sprites/Dance/spr_mike_cat_dance_6.png" id="8_xoyis"]
+[ext_resource type="Texture2D" uid="uid://b562404di2iqp" path="res://sprites/Dance/spr_mike_cat_dance_7.png" id="9_of007"]
+[ext_resource type="Texture2D" uid="uid://dr0tx35r50uwh" path="res://sprites/Dance/spr_mike_cat_dance_8.png" id="10_vp057"]
+[ext_resource type="Texture2D" uid="uid://doidhtgns38wi" path="res://sprites/Dance/spr_mike_cat_dance_9.png" id="11_1lpn0"]
+[ext_resource type="Texture2D" uid="uid://euvn0hq85f2f" path="res://sprites/Dance/spr_mike_cat_dance_10.png" id="12_hpayf"]
+[ext_resource type="Texture2D" uid="uid://dng0robq0tb6e" path="res://sprites/Dance/spr_mike_cat_dance_11.png" id="13_x1l4t"]
+[ext_resource type="Texture2D" uid="uid://ctsl545fefhsn" path="res://sprites/Dance/spr_mike_cat_dance_12.png" id="14_ne540"]
+[ext_resource type="Texture2D" uid="uid://dew50dnu801x3" path="res://sprites/Dance/spr_mike_cat_dance_13.png" id="15_84pnu"]
+[ext_resource type="Texture2D" uid="uid://fdfmg3b7do8n" path="res://sprites/Dance/spr_mike_cat_dance_14.png" id="16_6nocg"]
+[ext_resource type="Texture2D" uid="uid://duk1jfvbwacww" path="res://sprites/Dance/spr_mike_cat_dance_15.png" id="17_l56cd"]
+[ext_resource type="AudioStream" uid="uid://cvqbgxew2l5qd" path="res://sounds/bagel_susie.ogg" id="18_yvecl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qmc5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yvecl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gtjll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1qmc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7i4pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_06bct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l5k2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xoyis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_of007")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vp057")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1lpn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hpayf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x1l4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ne540")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_84pnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6nocg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l56cd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_kh6eb"]
+resource_name = "glow"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yvecl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yvecl"]
+_data = {
+&"RESET": SubResource("Animation_yvecl"),
+&"glow": SubResource("Animation_kh6eb")
+}
+
+[node name="RainbowCat" instance=ExtResource("1_kh6eb")]
+script = ExtResource("2_eirod")
+points = 250
+sprites = SubResource("SpriteFrames_1qmc5")
+
+[node name="RainbowCatEffect" parent="." index="0" instance=ExtResource("3_x32nw")]
+unique_name_in_owner = true
+
+[node name="ClickSound" parent="." index="3"]
+stream = ExtResource("18_yvecl")
+
+[node name="Anim" type="AnimationPlayer" parent="." index="4"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_yvecl")
+}
+autoplay = "glow"
