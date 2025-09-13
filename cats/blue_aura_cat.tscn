@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7l4n5dhla5hh"]
+[gd_scene load_steps=24 format=3 uid="uid://c7l4n5dhla5hh"]
 
 [ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_r1ixk"]
 [ext_resource type="Texture2D" uid="uid://dcd0jg7c500ax" path="res://sprites/Dance/spr_mike_cat_dance_0.png" id="2_d80ql"]
-[ext_resource type="Script" uid="uid://bln56uu7ggpw8" path="res://cats/blue_aura_cat.gd" id="2_iijpg"]
 [ext_resource type="Texture2D" uid="uid://dyxstuf2syhgg" path="res://sprites/Dance/spr_mike_cat_dance_1.png" id="3_iijpg"]
 [ext_resource type="Texture2D" uid="uid://28cirvl2qmiv" path="res://sprites/Dance/spr_mike_cat_dance_2.png" id="4_l6fui"]
 [ext_resource type="Texture2D" uid="uid://brhm3x6kac2bb" path="res://sprites/Dance/spr_mike_cat_dance_3.png" id="5_x47u1"]
@@ -85,6 +84,21 @@ shader_parameter/inside = false
 shader_parameter/add_margins = false
 shader_parameter/number_of_images = Vector2(1, 1)
 
+[sub_resource type="Animation" id="Animation_nmk0x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_aafo0"]
 resource_name = "glow"
 loop_mode = 1
@@ -101,21 +115,6 @@ tracks/0/keys = {
 "values": [Color(0, 0, 1, 1), Color(0, 0, 1, 0), Color(0, 0, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_nmk0x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a6b6t"]
 _data = {
 &"RESET": SubResource("Animation_nmk0x"),
@@ -123,7 +122,6 @@ _data = {
 }
 
 [node name="BlueAuraCat" instance=ExtResource("1_r1ixk")]
-script = ExtResource("2_iijpg")
 sprites = SubResource("SpriteFrames_d80ql")
 
 [node name="AnimatedSprite2D" parent="." index="0"]

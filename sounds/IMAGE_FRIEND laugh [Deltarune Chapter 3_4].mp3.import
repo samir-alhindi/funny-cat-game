@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8kwmu1w5h2ho"
+path="res://.godot/imported/IMAGE_FRIEND laugh [Deltarune Chapter 3_4].mp3-6269e285bba961f393112c2c7c6f60f0.mp3str"
+
+[deps]
+
+source_file="res://sounds/IMAGE_FRIEND laugh [Deltarune Chapter 3_4].mp3"
+dest_files=["res://.godot/imported/IMAGE_FRIEND laugh [Deltarune Chapter 3_4].mp3-6269e285bba961f393112c2c7c6f60f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

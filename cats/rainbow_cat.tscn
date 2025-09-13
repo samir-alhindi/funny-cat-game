@@ -1,7 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://p2eg64ri5mi1"]
+[gd_scene load_steps=25 format=3 uid="uid://p2eg64ri5mi1"]
 
 [ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_kh6eb"]
-[ext_resource type="Script" uid="uid://bwbrhnko3e6p2" path="res://cats/rainbow_cat.gd" id="2_eirod"]
 [ext_resource type="Texture2D" uid="uid://dcd0jg7c500ax" path="res://sprites/Dance/spr_mike_cat_dance_0.png" id="2_yvecl"]
 [ext_resource type="Texture2D" uid="uid://dyxstuf2syhgg" path="res://sprites/Dance/spr_mike_cat_dance_1.png" id="3_gtjll"]
 [ext_resource type="PackedScene" uid="uid://c3ntbxuyqkusb" path="res://cats/rainbow_cat_effect.tscn" id="3_x32nw"]
@@ -21,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://duk1jfvbwacww" path="res://sprites/Dance/spr_mike_cat_dance_15.png" id="17_l56cd"]
 [ext_resource type="AudioStream" uid="uid://c3pd2gdciu25h" path="res://sounds/bagel_susie.wav" id="20_1qmc5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1qmc5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtjll"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -82,6 +81,21 @@ resource_local_to_scene = true
 offsets = PackedFloat32Array(0, 0.518272, 1)
 colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1)
 
+[sub_resource type="Animation" id="Animation_yvecl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_kh6eb"]
 resource_name = "glow"
 loop_mode = 2
@@ -98,21 +112,6 @@ tracks/0/keys = {
 "values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_yvecl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yvecl"]
 _data = {
 &"RESET": SubResource("Animation_yvecl"),
@@ -120,9 +119,8 @@ _data = {
 }
 
 [node name="RainbowCat" instance=ExtResource("1_kh6eb")]
-script = ExtResource("2_eirod")
 points = 250
-sprites = SubResource("SpriteFrames_1qmc5")
+sprites = SubResource("SpriteFrames_gtjll")
 
 [node name="RainbowCatEffect" parent="." index="0" instance=ExtResource("3_x32nw")]
 unique_name_in_owner = true

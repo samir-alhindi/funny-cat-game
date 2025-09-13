@@ -1,3 +1,12 @@
-res://cats/cat.tscn::f335b4f814e7ae5c4fa9227383bcfc3d::1757147849::res://.godot/exported/133200997/export-b2a74e140962a9de195dfc57b6ea052b-cat.scn
-res://cats/normal_cat.tres::0d65ecdaa46336c0fc7366047b10a7de::1757146539::res://.godot/exported/133200997/export-8800befb32411e0d6b7510ba5b185a53-normal_cat.res
-res://main/main.tscn::8f1f5a2c59b74fe84732f27eb7cbb758::1757147772::res://.godot/exported/133200997/export-435f623093a3e2498450e744191b98a6-main.scn
+res://cats/cat.tscn::5e8c15b97ffe2452decf8576a0adde66::1757523507::res://.godot/exported/133200997/export-b2a74e140962a9de195dfc57b6ea052b-cat.scn
+res://main/main.tscn::02012ca60e957e1a9c2b1f05ce2086e7::1757523947::res://.godot/exported/133200997/export-435f623093a3e2498450e744191b98a6-main.scn
+res://cats/angel_cat.tscn::132cf95f1ae03458320a698ef26ef517::1757331877::res://.godot/exported/133200997/export-d53b328887ca657f2f9bef5765643abc-angel_cat.scn
+res://cats/angel_cat_effect.tscn::e1132d94dfb8f09c40c4011bb5976675::1757329828::res://.godot/exported/133200997/export-2debef5aea138e49441e44ddbe3dcd24-angel_cat_effect.scn
+res://cats/blue_aura_cat.tscn::1ad75b7975a91c58a59c40d9fb7741ad::1757523392::res://.godot/exported/133200997/export-533217cd6b3d4e900f064f1c4ecf7e08-blue_aura_cat.scn
+res://cats/friend.tscn::b79883f7702204b9343640cbb5fcf240::1757523525::res://.godot/exported/133200997/export-459c2a30324fd65e87921d80a2e62810-friend.scn
+res://cats/normal_cat.tscn::b5afab3a96f7c83e582f6de7195a1c83::1757523500::res://.godot/exported/133200997/export-8b4dafed12872788a51d3ac929ad2820-normal_cat.scn
+res://cats/rainbow_cat.tscn::e2c59ac7ed1868d499a66fa5af05d67f::1757523448::res://.godot/exported/133200997/export-16d59276bdd77bb95007e86dd0d276fd-rainbow_cat.scn
+res://cats/rainbow_cat_effect.tscn::9754651036695cc57cd245f11371082f::1757329828::res://.godot/exported/133200997/export-7a196d2fb9a26db9ebabae16c1de2a30-rainbow_cat_effect.scn
+res://cats/score.tscn::2ebc9f9bcb311d106ad59419dfdb2ecf::1757331877::res://.godot/exported/133200997/export-65a17ac32e47197da584a39493e1d108-score.scn
+res://globals/global.tscn::360e2e00c4592c26336d04eb8c094e87::1757331877::res://.godot/exported/133200997/export-22eb374c17ae97780ee478122ece2435-global.scn
+res://window/window.tscn::48e0c8ee438303c44895a230c3ac571c::1757331912::res://.godot/exported/133200997/export-658b897dcf155760f460afaf84801401-window.scn

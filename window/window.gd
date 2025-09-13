@@ -13,7 +13,7 @@ func toggle_visibility(final_val: float, time: float) -> void:
 	tween.tween_property(self, "modulate:a", final_val, time)
 	await tween.finished
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		%CollisionShape2D.call_deferred("set_disabled", true)
 		Global.play_window_sound.emit()

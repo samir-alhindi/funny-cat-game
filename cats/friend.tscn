@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwrglmtjjw0p7"]
+
+[ext_resource type="PackedScene" uid="uid://bqvvdn25jdm0u" path="res://cats/cat.tscn" id="1_iwlk5"]
+[ext_resource type="Script" uid="uid://bvsjviydf38tf" path="res://cats/friend.gd" id="2_jgxph"]
+[ext_resource type="Texture2D" uid="uid://bufvdnxva4hwv" path="res://sprites/IMAGE_FRIEND.png" id="3_550pe"]
+[ext_resource type="AudioStream" uid="uid://8kwmu1w5h2ho" path="res://sounds/IMAGE_FRIEND laugh [Deltarune Chapter 3_4].mp3" id="4_qdcje"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qdcje"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_550pe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_550pe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FRIEND" instance=ExtResource("1_iwlk5")]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_jgxph")
+sprites = SubResource("SpriteFrames_qdcje")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(3.8147e-06, 3.8147e-06)
+sprite_frames = SubResource("SpriteFrames_550pe")
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = true
+
+[node name="JumpscareSound" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_qdcje")
+volume_db = 8.387
+autoplay = true

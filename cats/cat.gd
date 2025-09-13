@@ -10,7 +10,9 @@ var dir: Vector2
 static func new_cat(screen_size: Vector2, score: int) -> Cat:
 	var cat_scene: PackedScene = get_cat_scene(score)
 	var cat: Cat = cat_scene.instantiate()
+	@warning_ignore("shadowed_variable")
 	var offset := cat.offset
+	@warning_ignore("narrowing_conversion")
 	cat.global_position = Vector2(
 		randi_range(offset.x, screen_size.x-offset.x),
 		randi_range(offset.y, screen_size.y-offset.y)
@@ -22,20 +24,20 @@ static func new_cat(screen_size: Vector2, score: int) -> Cat:
 
 static func get_cat_scene(score: int) -> PackedScene:
 	var num := randf()
-	if num <= .25:
+	if num <= .05 and score >= 100:
+		return preload("uid://dwrglmtjjw0p7") # IMAGE_FRIEND
+	if num <= .10:
 		return preload("uid://bh4760nkbyug6") # Angel cat
-	elif num <= .50:
+	elif num <= .20:
 		return preload("uid://p2eg64ri5mi1") # Rainbow cat
-	elif num <= .75:
+	elif num <= .50:
 		return preload("uid://c7l4n5dhla5hh") # Blue Aura cat
 	else:
 		return preload("uid://cd8n8jsf0ilfd") # Normal cat
-	
 
 func _ready() -> void:
 	%AnimatedSprite2D.sprite_frames = sprites
 	%AnimatedSprite2D.play()
-	get_window().title = "50 points"
 
 func _physics_process(delta: float) -> void:
 	global_position += dir * speed * delta
@@ -47,11 +49,11 @@ func _physics_process(delta: float) -> void:
 	if pos.y + offset.y > get_viewport_rect().size.y or pos.y - offset.y < 0:
 		dir.y *= -1
 
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		on_click(event)
+		on_click()
 
-func on_click(event: InputEventMouseButton) -> void:
+func on_click() -> void:
 	%ClickSound.play()
 	dir = Vector2.ZERO
 	%CollisionShape2D.set_deferred("disabled", true)
